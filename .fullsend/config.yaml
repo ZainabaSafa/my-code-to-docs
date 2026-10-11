@@ -11,6 +11,12 @@ roles:
     - fix
     - retro
     - prioritize
+agents:
+    - name: review
+      source: harness/review.yaml
+      runtime: pi
+      model: sonnet
 allowed_remote_resources:
     - https://raw.githubusercontent.com/fullsend-ai/fullsend/
     - https://raw.githubusercontent.com/fullsend-ai/agents/
+    - https://raw.githubusercontent.com/csoceanu/agents/
