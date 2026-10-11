@@ -1,0 +1,26 @@
+# Temporary AISDLC-118 integration test harness.
+# Pinned to the current head of fullsend-ai/agents#1635.
+base: https://raw.githubusercontent.com/csoceanu/agents/3a051b16633f4cabcfd1a0a6325bd7abb2e59e96/harness/review.yaml#sha256=5de679b3497079634ea928235106bd84531c29101fa9e6ac5f05672ef58df36d
+
+# Custom agents need an explicit dispatch trigger. This mirrors /fs-review.
+trigger: >
+  event.source.system == "github"
+    && event.entity.kind == "work_item"
+    && event.transition.kind == "comment_added"
+    && has(event.state.change_proposal)
+    && has(event.transition.comment.command)
+    && event.transition.comment.command == "/fs-review"
+
+# The generic custom-agent path does not populate review-role-specific PR
+# context. Supply only the values needed to exercise this review on PR #74.
+# FULLSEND_APP_SET is intentionally omitted so Fullsend main must provide its
+# documented `fullsend-ai` default.
+env:
+  runner:
+    PR_NUMBER: "74"
+    PR_URL: "https://github.com/redhat-community-ai-tools/code-to-docs/pull/74"
+  sandbox:
+    PR_NUMBER: "74"
+    PR_URL: "https://github.com/redhat-community-ai-tools/code-to-docs/pull/74"
+    PRIOR_REVIEW_SHA: ""
+    PRIOR_REVIEW_PROVENANCE: "none"
