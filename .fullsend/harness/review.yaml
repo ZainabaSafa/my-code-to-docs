@@ -1,0 +1,6 @@
+# Temporary AISDLC-118 end-to-end verification override.
+#
+# Keep the built-in review role so Fullsend fetches and verifies the prior
+# review projection. Override only the registered review implementation,
+# pinned to the current head of fullsend-ai/agents#1635.
+base: https://raw.githubusercontent.com/csoceanu/agents/3a051b16633f4cabcfd1a0a6325bd7abb2e59e96/harness/review.yaml#sha256=5de679b3497079634ea928235106bd84531c29101fa9e6ac5f05672ef58df36d
