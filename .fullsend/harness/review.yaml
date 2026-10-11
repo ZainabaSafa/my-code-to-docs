@@ -1,6 +1,0 @@
-# Temporary AISDLC-118 live verification override.
-#
-# The built-in Fullsend review job remains enabled so that it fetches and
-# verifies the prior review projection exactly as it does in production. Only
-# the review harness is replaced, pinned to the current head of agents#1635.
-base: https://raw.githubusercontent.com/csoceanu/agents/3a051b16633f4cabcfd1a0a6325bd7abb2e59e96/harness/review.yaml#sha256=5de679b3497079634ea928235106bd84531c29101fa9e6ac5f05672ef58df36d
