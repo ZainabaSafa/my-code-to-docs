@@ -1,0 +1,6 @@
+# Temporary pin of unmerged review from fullsend-ai/agents#1653
+# (commit b812f2be9bffbf923a4a007ba57d71f51d6810af).
+#
+# Keep the built-in review role so Fullsend still fetches the prior-review
+# projection. Override only the registered review implementation.
+base: https://raw.githubusercontent.com/fullsend-ai/agents/b812f2be9bffbf923a4a007ba57d71f51d6810af/harness/review.yaml#sha256=018ea874f6b0faa478fdd3e1eff005938dc59b8445b05a8b8e24d0196f0b9188
