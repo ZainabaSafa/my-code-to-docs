@@ -15,7 +15,7 @@ agents:
     - name: review
       source: harness/review.yaml
       runtime: pi
-      model: sonnet
+      model: opus
 allowed_remote_resources:
     - https://raw.githubusercontent.com/fullsend-ai/fullsend/
     - https://raw.githubusercontent.com/fullsend-ai/agents/
