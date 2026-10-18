@@ -23,9 +23,9 @@ agents:
       model: sonnet
       subagents:
           challenger: opus
-          correctness: openai/gpt-6.1-sol
+          correctness: opus
           docs-currency: google-vertex/gemini-3.8-flash
-          security: openai/gpt-6.1-sol
+          security: opus
           style-conventions: google-vertex/gemini-3.8-flash
 allowed_remote_resources:
     - https://raw.githubusercontent.com/fullsend-ai/fullsend/
